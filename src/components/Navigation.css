@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigate {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(20deg, #770f9d, #071836);
+    color: white;
+    padding: 10px 20px;
+    height: 80px;
+    font-size: larger;
+    position: relative;
+}
+
+.logo {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;  
+    padding: 0;
+}
+
+.name {
+    cursor: pointer;
+    margin-right: 30px;
+    position: relative;
+
+}
+
+.name a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    z-index: 2;
+}
+
+.menu li {
+    display: flex; /*Adding a flex container for a vertical line */
+    align-items: center; 
+    margin-right: 20px; 
+  }
+
+  .menu li:not(:last-child)::after {
+    content: ' ';
+    display: block;
+    width: 2px; 
+    height: 30px; 
+    background-color: white; 
+    margin-left: 30px; 
+ 
+  }  /* Adding a vertical line between menu items */
+  
+
+  .name:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px white; 
+  }
+
+  .menu li:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px white; 
+  }
+
+  .hire {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s, color 0.2s;
+    margin-right: 40px;
+    z-index: 2;
+  }
+
+  .hire a, .hire a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+  .hire:hover {
+    background-color: white;
+    color: #800080;
+    transition: background 0.2s, color 0.2s;
+  }
+  .hire a:hover{
+    text-decoration: none;
+    background-color: white;
+    color: #800080;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+
+  @media (max-width: 768px) {
+    .navigate {
+      flex-direction: column; 
+      height: auto; 
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .menu {
+      margin : 20px; 
+    }
+
+    .menu li:not(:last-child)::after {
+      display: none; 
+    }
+
+  }

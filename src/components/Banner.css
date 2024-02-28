@@ -1,0 +1,181 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.banner {
+    background-image: url(../img/wallpaper_1.jpg);
+    height: auto; 
+    width: 100%;
+    display: flex; 
+    align-items: flex-end;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    
+  }
+
+  @keyframes waveAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes waveAnimationReverse {
+  0% {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+  
+  .banner-text {
+    display: flex;              
+    flex-direction: column; 
+    align-items: flex-start;     
+    color: #fff; 
+    padding-left: 50px; 
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    font-size: 20px;
+    animation: waveAnimation 1.5s ease-in-out;
+  }
+
+  .text_special {
+    display: flex;              
+    align-items: flex-start;     
+    color: #fff; 
+    padding-top: 20px;
+  }
+  
+  .girl-img {
+    top: 0;
+    height: 120%;
+    width: auto;
+    max-width: 120%;
+    position: absolute;
+    right: 120px;
+    bottom: 0;
+    margin-bottom: 0;
+    animation: waveAnimationReverse 1.5s ease-in-out;
+    z-index: 1;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  
+
+  .greeting{
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 7px;
+    padding-top: 30px;
+  }
+  
+  .introduce {
+    display: flex;
+    flex-direction: column;
+    color: #a389bd; 
+    font-weight: bold;
+    font-size: 70px; 
+    margin: 0;
+    padding-left: 7px;
+  }
+
+  .introduce p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .introduce:hover {
+    cursor: default; 
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+
+.social-icons img {
+  margin: 10px;
+  width: 24x;
+  height: 24px;
+}
+
+.social-icons img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); 
+}
+
+
+@media (max-width: 900px) {
+  .banner {
+    position: relative;
+  }
+  .girl-img {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .banner-text {
+    font-size: 14px;
+  }
+
+  .greeting {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+
+  .introduce {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .girl-img {
+    display: none; 
+  }
+
+  .banner-text {
+    font-size: 14px;
+  }
+
+  .greeting {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+
+  .introduce {
+    font-size: 32px;
+  }
+}
+
