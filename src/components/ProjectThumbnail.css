@@ -1,0 +1,117 @@
+.project-thumbnail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px;
+  }
+  
+  .thumbnail-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+  }
+  
+  .project-image,
+  .white-square-container {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    border: 2px solid #6a0dad;
+    box-sizing: border-box;
+  }
+  
+  .project-image {
+    object-fit: cover;
+  }
+  
+  .white-square-container {
+    background-color: white;
+    text-align: start;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .white-square {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6a0dad;
+  }
+
+  .portfolio-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .github-button,
+  .site-button,
+  .portfolio-github-button,
+  .email-button {
+    background-color: #6a0dad;
+    border: 2px solid #6a0dad;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .aurora-buttons .github-button:hover,
+  .aurora-buttons .site-button:hover,
+  .portfolio-buttons .portfolio-github-button:hover,
+  .email-button:hover {
+    background-color: white;
+    color: #6a0dad;
+    text-decoration: none;
+  }
+
+  
+  .github-button a,
+.site-button a,
+.portfolio-github-button a,
+.email-button {
+  color: white; 
+  text-decoration: none; 
+}
+
+.aurora-buttons .github-button:hover a,
+.aurora-buttons .site-button:hover a,
+.portfolio-buttons .portfolio-github-button:hover a,
+.email-button:hover {
+  color: #6a0dad;
+}
+
+
+.aurora-buttons {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+  
+  @media (max-width: 768px) {
+    .project-thumbnail {
+      margin: 20px;
+    }
+  
+    .project-image,
+    .white-square-container {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .aurora-buttons,
+    .white-square-container {
+      position: relative;
+    }
+  }
+  
