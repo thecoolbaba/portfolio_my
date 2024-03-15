@@ -4,7 +4,7 @@ import ProjectThumbnail from "./ProjectThumbnail";
 
 function Projects() {
     return(
-        <div className="projects">
+        <div className="projects" style={{ fontFamily: 'Open Sans, sans-serif' }}>
             <h3 className="projects-title">My Projects</h3>   
             <div className="project-links">
              <ProjectThumbnail/>   
